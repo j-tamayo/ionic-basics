@@ -9,13 +9,20 @@ import { ShopPage } from '../shop/shop';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  // usrPage = UsersPage;
+  // shopPage = ShopPage;
 
   constructor(public navCtrl: NavController) {
 
   }
 
   onGoToUsers() {
-    this.navCtrl.push(UsersPage);
+    this.navCtrl.push(UsersPage)
+      .then((data) => {
+        if(!data) {
+          console.log('Access denied, Argument was ' + data);
+        }
+      });
   }
 
   onGoToShop() {

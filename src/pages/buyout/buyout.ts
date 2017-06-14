@@ -6,17 +6,17 @@ import { NavParams, NavController } from 'ionic-angular';
   templateUrl: 'buyout.html'
 })
 export class BuyoutPage {
-  productName: string;
+  productData: {name: string, quantity: number};
 
   constructor (
     private navParams: NavParams,
     private navCtrl: NavController
   ) {
-
+    this.productData = this.navParams.data;
   }
 
   ngOnInit() {
-    this.productName = this.navParams.get('productName');
+    //this.productName = this.navParams.get('productName');
   }
 
   onGoMain() {

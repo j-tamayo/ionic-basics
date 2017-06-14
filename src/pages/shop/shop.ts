@@ -13,7 +13,7 @@ export class ShopPage {
 
   }
 
-  onGoToBuyout(product) {
-    this.navCtrl.push(BuyoutPage, {productName: product});
+  onGoToBuyout(productData: {name: string, quantity: number}) {
+    this.navCtrl.push(BuyoutPage, productData);
   }
 }

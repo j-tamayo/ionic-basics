@@ -5,6 +5,8 @@
 </ion-header>
 
 <ion-content padding>
-  <h1>{{productName}}</h1>
+  <h2>Your Order</h2>
+  <p>Name: {{ productData.name }}</p>
+  <p>Quantity: {{productData.quantity}}</p>
   <button ion-button (click)="onGoMain()">Buy</button>
 </ion-content>
